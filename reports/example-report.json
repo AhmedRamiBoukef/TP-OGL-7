@@ -11,7 +11,6 @@
         "steps": [
           {
             "result": {
-              "duration": 3001200,
               "status": "passed"
             },
             "line": 3,
@@ -24,51 +23,40 @@
         ]
       },
       {
-        "start_timestamp": "2023-12-16T22:22:01.621Z",
+        "start_timestamp": "2023-12-16T22:34:56.461Z",
         "line": 5,
-        "name": "Determinant",
+        "name": "Cofactor",
         "description": "",
-        "id": "matrix;determinant",
+        "id": "matrix;cofactor",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 13997100,
               "status": "passed"
             },
             "line": 6,
-            "name": "I compute determinant of",
+            "name": "I compute cofactor of",
             "match": {
-              "location": "test.java.MatrixSteps.iComputeDeterminantOf(io.cucumber.datatable.DataTable)"
+              "location": "test.java.MatrixSteps.iComputeCofactorOf(io.cucumber.datatable.DataTable)"
             },
             "rows": [
               {
                 "cells": [
                   "col1",
-                  "col2",
-                  "col3"
+                  "col2"
                 ]
               },
               {
                 "cells": [
                   "1",
-                  "2",
-                  "3"
+                  "2"
                 ]
               },
               {
                 "cells": [
-                  "4",
-                  "5",
-                  "6"
-                ]
-              },
-              {
-                "cells": [
-                  "7",
-                  "8",
-                  "12"
+                  "3",
+                  "4"
                 ]
               }
             ],
@@ -76,20 +64,33 @@
           },
           {
             "result": {
-              "duration": 3004100,
               "status": "passed"
             },
-            "line": 11,
-            "name": "The result of determinant is -9",
+            "line": 10,
+            "name": "The result of cofactor is",
             "match": {
-              "arguments": [
-                {
-                  "val": "-9",
-                  "offset": 29
-                }
-              ],
-              "location": "test.java.MatrixSteps.iFindAsDeterminantResult(double)"
+              "location": "test.java.MatrixSteps.iFindAsCofactoreResult(io.cucumber.datatable.DataTable)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "col1",
+                  "col2"
+                ]
+              },
+              {
+                "cells": [
+                  "4",
+                  "-3"
+                ]
+              },
+              {
+                "cells": [
+                  "-2",
+                  "1"
+                ]
+              }
+            ],
             "keyword": "Then "
           }
         ]
@@ -115,11 +116,11 @@
         ]
       },
       {
-        "start_timestamp": "2023-12-16T22:22:01.741Z",
-        "line": 14,
-        "name": "Transpose",
+        "start_timestamp": "2023-12-16T22:34:56.524Z",
+        "line": 17,
+        "name": "Inverse",
         "description": "",
-        "id": "matrix;transpose",
+        "id": "matrix;inverse",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -127,10 +128,10 @@
             "result": {
               "status": "passed"
             },
-            "line": 15,
-            "name": "I compute transpose of",
+            "line": 18,
+            "name": "I compute inverse of",
             "match": {
-              "location": "test.java.MatrixSteps.iComputeTransposeOf(io.cucumber.datatable.DataTable)"
+              "location": "test.java.MatrixSteps.iComputeInverseOf(io.cucumber.datatable.DataTable)"
             },
             "rows": [
               {
@@ -150,12 +151,6 @@
                   "3",
                   "4"
                 ]
-              },
-              {
-                "cells": [
-                  "5",
-                  "6"
-                ]
               }
             ],
             "keyword": "When "
@@ -164,31 +159,28 @@
             "result": {
               "status": "passed"
             },
-            "line": 20,
-            "name": "The result of transpose is",
+            "line": 22,
+            "name": "The result of inverse is",
             "match": {
-              "location": "test.java.MatrixSteps.iFindAsTransposeResult(io.cucumber.datatable.DataTable)"
+              "location": "test.java.MatrixSteps.iFindAsInverseResult(io.cucumber.datatable.DataTable)"
             },
             "rows": [
               {
                 "cells": [
                   "col1",
-                  "col2",
-                  "col3"
+                  "col2"
                 ]
               },
               {
                 "cells": [
-                  "1",
-                  "3",
-                  "5"
+                  "-2",
+                  "1"
                 ]
               },
               {
                 "cells": [
-                  "2",
-                  "4",
-                  "6"
+                  "1.5",
+                  "-0.5"
                 ]
               }
             ],
