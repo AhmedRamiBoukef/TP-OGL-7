@@ -3,8 +3,28 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-12-16T22:22:28.745Z",
-        "line": 3,
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I have A Matrix",
+            "match": {
+              "location": "test.java.MatrixSteps.iHaveAMatrix()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-12-16T22:24:24.890Z",
+        "line": 5,
         "name": "Cofactor",
         "description": "",
         "id": "matrix;cofactor",
@@ -13,21 +33,9 @@
         "steps": [
           {
             "result": {
-              "duration": 498300,
               "status": "passed"
             },
-            "line": 4,
-            "name": "I have A Matrix",
-            "match": {
-              "location": "test.java.MatrixSteps.iHaveAMatrix()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 5,
+            "line": 6,
             "name": "I compute cofactor of",
             "match": {
               "location": "test.java.MatrixSteps.iComputeCofactorOf(io.cucumber.datatable.DataTable)"
@@ -56,10 +64,9 @@
           },
           {
             "result": {
-              "duration": 16338600,
               "status": "passed"
             },
-            "line": 9,
+            "line": 10,
             "name": "The result of cofactor is",
             "match": {
               "location": "test.java.MatrixSteps.iFindAsCofactoreResult(io.cucumber.datatable.DataTable)"
@@ -81,6 +88,99 @@
                 "cells": [
                   "-2",
                   "1"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I have A Matrix",
+            "match": {
+              "location": "test.java.MatrixSteps.iHaveAMatrix()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-12-16T22:24:24.953Z",
+        "line": 17,
+        "name": "Inverse",
+        "description": "",
+        "id": "matrix;inverse",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I compute inverse of",
+            "match": {
+              "location": "test.java.MatrixSteps.iComputeInverseOf(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "col1",
+                  "col2"
+                ]
+              },
+              {
+                "cells": [
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "cells": [
+                  "3",
+                  "4"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The result of inverse is",
+            "match": {
+              "location": "test.java.MatrixSteps.iFindAsInverseResult(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "col1",
+                  "col2"
+                ]
+              },
+              {
+                "cells": [
+                  "-2",
+                  "1"
+                ]
+              },
+              {
+                "cells": [
+                  "1.5",
+                  "-0.5"
                 ]
               }
             ],
