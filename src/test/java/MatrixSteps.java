@@ -1,10 +1,12 @@
-import com.example.exception.NoSquareException;
-import com.example.model.Matrix;
-import com.example.service.MatrixMathematics;
+package test.java;
+
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import main.java.com.example.exception.NoSquareException;
+import main.java.com.example.model.Matrix;
+import main.java.com.example.service.MatrixMathematics;
 import org.junit.Assert;
 
 import java.util.List;
@@ -15,6 +17,7 @@ import static org.junit.Assert.assertEquals;
 
 public class MatrixSteps {
     double det ;
+    Matrix transposeMatrix ;
     Matrix mat;
 
     @Given("I have A Matrix")
@@ -44,5 +47,41 @@ public class MatrixSteps {
 
     }
 
+
+    @When("I compute transpose of")
+    public void iComputeTransposeOf(DataTable table) throws NoSquareException {
+        double [][] data = new double[3][2];
+        List<Map<String, Double>> rows = table.asMaps(String.class, Double.class);
+        int i =0;
+        for (Map<String, Double> columns : rows){
+            int j =0;
+            data[i][j]= columns.get("col1");
+            data[i][j+1] = columns.get("col2");
+            i=i+1;
+        }
+        mat.setData(data);
+        transposeMatrix = MatrixMathematics.transpose(mat);
+    }
+
+    @Then("The result of transpose is")
+    public void iFindAsTransposeResult(DataTable table) {
+        double [][] data = new double[2][3];
+        List<Map<String, Double>> rows = table.asMaps(String.class, Double.class);
+        int i =0;
+        for (Map<String, Double> columns : rows){
+            int j =0;
+            data[i][j]= columns.get("col1");
+            data[i][j+1] = columns.get("col2");
+            data[i][j+2]= columns.get("col3");
+            i=i+1;
+        }
+        Matrix result = new Matrix() ;
+        result.setData(data);
+        assertEquals(result,transposeMatrix);
+
+
+    }
+
+   
 }
 

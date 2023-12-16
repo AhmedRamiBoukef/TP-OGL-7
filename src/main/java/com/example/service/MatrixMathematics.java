@@ -1,7 +1,8 @@
-package com.example.service;
+package main.java.com.example.service;
 
-import com.example.exception.NoSquareException;
-import com.example.model.Matrix;
+
+import main.java.com.example.exception.NoSquareException;
+import main.java.com.example.model.Matrix;
 
 public class MatrixMathematics {
 
@@ -70,4 +71,21 @@ public class MatrixMathematics {
 		return mat;
 	}
 	
+
+	/**
+	 * Transpose of a matrix - Swap the columns with rows
+	 * @param matrix
+	 * @return
+	 */
+	public static Matrix transpose(Matrix matrix) {
+		Matrix transposedMatrix = new Matrix(matrix.getNcols(), matrix.getNrows());
+		for (int i=0;i<matrix.getNrows();i++) {
+			for (int j=0;j<matrix.getNcols();j++) {
+				transposedMatrix.setValueAt(j, i, matrix.getValueAt(i, j));
+			}
+		}
+		return transposedMatrix;
+	}
+
+
 }
